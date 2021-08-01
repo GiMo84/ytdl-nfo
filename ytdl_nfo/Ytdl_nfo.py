@@ -20,7 +20,8 @@ class Ytdl_nfo:
 
     def process(self):
         self.nfo.generate(self.data)
-        #self.nfo.print_nfo()
+
+    def write_nfo(self):
         self.nfo.write_nfo(os.path.join(self.dir, f'{self.filename}.nfo'))
 
     def print_data(self):
