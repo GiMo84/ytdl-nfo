@@ -25,7 +25,13 @@ def main():
             for file_name in files:
                 file_path = os.path.join(root, file_name)
                 if re.search(args.regex, file_name):
-                    if args.overwrite or not os.path.exists(file_path[:-10] + ".nfo"):
+
+                    path_no_ext = os.path.splitext(file_path)[0]
+                    info_re = r".info$"
+                    if re.search(info_re):
+                        path_no_ext = re.sub(info_re, '', path_no_ext)
+
+                    if args.overwrite or not os.path.exists(path_no_ext + ".nfo"):
                         print(f'Processing {file_path} with extractor {args.extractor}')
                         file = Ytdl_nfo(file_path, args.extractor)
                         file.process()
