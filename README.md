@@ -70,7 +70,7 @@ ytdl-nfo --config
 Issues/Pull Requests are welcome to add more youtube-dl supported extractors to the repo.
 
 ### Custom Extractors
-Coming Soon...
+- raiplay.it
 
 ## Todo
 - [ ] Add try catches to pretty print errors
