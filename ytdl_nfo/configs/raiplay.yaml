@@ -1,0 +1,10 @@
+episodedetails:
+  - title: '{episode}'
+  - showtitle: '{series}'
+  - uniqueid:
+      attr:
+        type: 'raiplay'
+        default: "true"
+      value: '{display_id}'
+  - plot: '{description}'
+
